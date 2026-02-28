@@ -39,6 +39,7 @@ export type ErrorsObject = {
   referenceError: ErrorType;
   typeError: ErrorType;
   syntaxError: ErrorType;
+  rangeError: ErrorType;
   [key: string]: ErrorType;
 }
 
@@ -137,11 +138,17 @@ export const errors: ErrorsObject = {
     details: 'A value is not of the expected type or used in an incompatible way',
     hint: 'Check the function this error was thrown and make sure all variables are being used properly.'
   },
-  syntaxErrror: {
+  syntaxError: {
     code: 'syntax_error',
     message: 'Syntax error',
     details: 'There is a syntax error',
     hint: 'Check the syntax.'
+  },
+  rangeError: {
+    code: 'range',
+    message: 'Range error',
+    details: 'A value is passed in to a function that does not allow a range that includes the value',
+    hint: 'Check the value that is passed into the function throwing the error, it may be an unallowed string value, array of illegal length, etc.'
   }
 };
 
@@ -216,6 +223,14 @@ const formatError = (error: unknown): ErrorType => {
 
   if (error instanceof TypeError) {
     return errors.typeError;
+  }
+
+  if (error instanceof SyntaxError) {
+    return errors.syntaxError;
+  }
+
+  if (error instanceof RangeError) {
+    return errors.rangeError;
   }
 
   const typedError = error as UnformattedError;

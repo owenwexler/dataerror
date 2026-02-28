@@ -5,9 +5,11 @@
   "keywords": [
     "data",
     "error",
-    "error",
-    "handling",
+    "error handling",
     "library",
+    "minimal",
+    "lightweight",
+    "typescript",
     "package",
     "npm"
   ],
@@ -21,17 +23,16 @@
   },
   "license": "ISC",
   "author": "Owen Wexler",
-  "type": "ESM",
-  "main": "index.ts",
+  "type": "module",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.2",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
     "vitest": "^4.0.18"
-  },
-  "dependencies": {
-    "@eslint/eslintrc": "^3.3.4",
-    "eslint": "^10.0.2"
   }
 }
