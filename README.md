@@ -211,6 +211,8 @@ import { errors } from 'dataerror';
 | `unknownError` | `unknown_error` | Custom error of unknown type | Fallback used when the original error cannot be classified. |
 | `referenceError` | `reference_error` | Reference error | A JavaScript `ReferenceError` was caught (e.g. accessing an undefined variable). |
 | `typeError` | `type_error` | Type error | A JavaScript `TypeError` was caught (e.g. calling a non-function). |
+| `syntaxError` | `syntax_error` | Syntax error | A JavaScript `SyntaxError` was caught |
+| `rangeError` | `range_error` | Range error | A JavaScript `RangeError` was caught |
 
 Every entry in this dictionary has all four `ErrorType` fields (`code`, `message`, `details`, `hint`) fully populated with sensible defaults.
 

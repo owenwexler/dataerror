@@ -24,9 +24,13 @@
   "license": "ISC",
   "author": "Owen Wexler",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "src", "README.md"],
   "scripts": {
-    "test": "vitest"
+    "lint": "npx eslint .",
+    "test": "vitest",
+    "build": "tsc"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
