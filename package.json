@@ -1,0 +1,37 @@
+{
+  "name": "dataerror",
+  "version": "1.0.0",
+  "description": "A minimal type-safe error-handling library",
+  "keywords": [
+    "data",
+    "error",
+    "error",
+    "handling",
+    "library",
+    "package",
+    "npm"
+  ],
+  "homepage": "https://github.com/owenwexler/dataerror#readme",
+  "bugs": {
+    "url": "https://github.com/owenwexler/dataerror/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owenwexler/dataerror.git"
+  },
+  "license": "ISC",
+  "author": "Owen Wexler",
+  "type": "ESM",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.3.4",
+    "eslint": "^10.0.2"
+  }
+}
