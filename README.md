@@ -1,6 +1,6 @@
 # dataerror
 
-A lightweight, opinionated TypeScript error-handling library that brings structure and consistency to every async function return in your codebase.
+A lightweight, opinionated framework-agnostic TypeScript error-handling library that brings structure and consistency to every async function return in your codebase.
 
 ## Why dataerror?
 
@@ -17,6 +17,8 @@ If the operation succeeds, `data` is populated and `error` is `null`. If it fail
 The library also ships a curated dictionary of common application errors (invalid credentials, missing inputs, database failures, etc.) so your team doesn't have to reinvent error definitions across services.
 
 Larger error-handling libraries have a learning curve.  **dataerror** is simple and minimal - two functions, a return type, an error type, and an extendable dictionary of common errors - so you can jump in immediately.
+
+**dataerror** is framework-agnostic and works with every TypeScript framework and runtime.
 
 ---
 
