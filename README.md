@@ -75,7 +75,7 @@ const getCities = (): DataErrorReturnObject<City[]> => {
 	return await success<City[]>(citiesResponse.data);
   } catch (error) {
     // it is still good practice to include a catch block in case an error is thrown for some reason
-	return await failure<City[]>()
+	return await failure<City[]>();
   }
 }
 ````
