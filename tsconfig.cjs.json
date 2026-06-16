@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist-cjs",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "strict": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["tests/**/*", "node_modules", "**/*.spec.ts", "**/*.test.ts"]
+}

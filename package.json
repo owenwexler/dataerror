@@ -1,6 +1,6 @@
 {
   "name": "dataerror",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A minimal type-safe error-handling library",
   "keywords": [
     "data",
@@ -24,13 +24,28 @@
   "license": "ISC",
   "author": "Owen Wexler",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
   "files": ["dist", "src", "README.md"],
   "scripts": {
     "lint": "npx eslint .",
     "test": "vitest",
-    "build": "tsc"
+    "build:esm": "tsc",
+    "build:cjs": "tsc -p tsconfig.cjs.json && mv dist-cjs/index.js dist/index.cjs && mv dist-cjs/index.d.ts dist/index.d.cts && rm -rf dist-cjs",
+    "build": "npm run build:esm && npm run build:cjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

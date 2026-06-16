@@ -183,7 +183,7 @@ const sleep = (ms: number) => {
  }
  */
 
-const logError = (error: ErrorType | unknown, location: string) => {
+export const logError = (error: ErrorType | unknown, location: string) => {
   const typedError = error as ErrorType;
   const code = typedError.code ? typedError.code : errors.unknownError.code;
   const message = typedError.message ? typedError.message : errors.unknownError.message;
